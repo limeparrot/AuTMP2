@@ -36,12 +36,6 @@ int vdel(char delName)
 		edel(V_LS[i].info.name, delName);
 	}
 	for (int i = indexOfName(delName); i < N-1; i++) {
-		/*V_LS[i].head = V_LS[i + 1].head;
-		V_LS[i].info.name = V_LS[i+1].info.name;
-		V_LS[i].info.parent = V_LS[i + 1].info.parent;
-		V_LS[i].info.visited = V_LS[i + 1].info.visited;
-		V_LS[i].info.mark = V_LS[i + 1].info.dfn;
-		V_LS[i].info.fin = V_LS[i + 1].info.fin;*/
 		V_LS[i] = V_LS[i + 1];
 	}
 	N--;
@@ -146,9 +140,7 @@ int findAllCuts(Versh_LS* V_LS, int N)
 
 
 
-		//for (int i = 0; arr[i] != -1; i++)
-		//	cout << arr[i];
-		//cout << " -- ";
+
 		for (int i = 0; arr[i] != -1; i++)
 		{
 			
